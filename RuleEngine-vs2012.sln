@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yea.RuleEngine", "RuleEngine\Yea.RuleEngine.csproj", "{057381BB-3A68-4D95-AD78-B65739C95A9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yea.RuleEngine.Sample", "RuleEngine.Sample\Yea.RuleEngine.Sample.csproj", "{EA6A1577-7F27-412D-9C8B-B7B587CD3A0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yea.RuleEngine.Tests", "Yea.RuleEngine.Tests\Yea.RuleEngine.Tests.csproj", "{21CEA639-75BA-4035-B962-109121058CB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{057381BB-3A68-4D95-AD78-B65739C95A9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{057381BB-3A68-4D95-AD78-B65739C95A9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{057381BB-3A68-4D95-AD78-B65739C95A9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{057381BB-3A68-4D95-AD78-B65739C95A9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA6A1577-7F27-412D-9C8B-B7B587CD3A0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA6A1577-7F27-412D-9C8B-B7B587CD3A0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA6A1577-7F27-412D-9C8B-B7B587CD3A0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA6A1577-7F27-412D-9C8B-B7B587CD3A0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21CEA639-75BA-4035-B962-109121058CB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21CEA639-75BA-4035-B962-109121058CB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21CEA639-75BA-4035-B962-109121058CB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21CEA639-75BA-4035-B962-109121058CB4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
