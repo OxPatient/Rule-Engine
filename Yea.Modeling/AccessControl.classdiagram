@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="a4216850-d4ba-4ab3-9da2-f3a2af927ea5" name="Access Control" linkedPackageId="3e225f4a-2917-4f6e-9e49-4eb678d7372c" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="76e743f5-75c8-4835-986b-30f09fa275d0" name="IUser" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0dce698b-7cb8-4321-8660-aae9c6f9f6f7" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="58b66276-2459-406f-a68d-c3b4515e0a7c" name="IDept" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="60402504-5476-4a3e-bb47-40b5f1268613" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="61254f79-4f1f-44de-9ce2-0bf25ed10ae4" name="IPosition" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="648af55b-8ce4-4a25-aa15-d893af832d02" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="3c7a9864-350a-4e53-a282-c98a22bd120e" name="IAccessControlSerive" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="377070af-e39f-4d42-9d68-377e45eceed7" />
+        <ownedOperations>
+          <operation Id="a11bc448-8f4c-4394-abd1-f8e5cbfdbfca" name="Login" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ab4f5cf7-3f41-437d-b5bd-9bdd8b5610c7" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="122d30a5-f026-4868-b987-d1556d122784" name="user" direction="In">
+                  <elementDefinition Id="e541e70e-087e-4ddd-b2e7-5cd9143c635c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="00a82d5b-37a0-4ed6-9847-21930671dd63" LastKnownName="IUser" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b699c168-c487-44d1-bc8c-445cf394c8a3" direction="Return">
+                  <elementDefinition Id="fb6b90cc-5012-4ee5-a3f1-20b56bbe0961" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f6f865a4-35b9-4037-9ea6-121d03ac5e73" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="de4553d8-dc7c-475e-a9f2-056e2b049072" name="Logout" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4c4985d2-d4df-42f3-b90b-6912d84dc2f1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b376516c-370b-4856-8cf6-317bbbea6128" name="user" direction="In">
+                  <elementDefinition Id="faa90559-1c4e-4832-bb51-15aa56a69ed4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="00a82d5b-37a0-4ed6-9847-21930671dd63" LastKnownName="IUser" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="b5f8c001-8e60-457d-8e09-74da8e5780b8" name="Check" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c0641e9d-3d60-4f00-bd9a-886ece810dfb" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="02d8cd6f-b94e-4aa0-b5a3-9472dde75c1f" direction="Return">
+                  <elementDefinition Id="32615eed-2f87-4117-9bd9-40977579dcf2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c1c7fefe-eea6-4487-9313-c3dbee1027a8" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1f36e927-7e7a-4f22-a0e3-47e92b69ba47" name="user" direction="In">
+                  <elementDefinition Id="5b7d1d4a-b287-4784-a079-4153893f4dc2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="00a82d5b-37a0-4ed6-9847-21930671dd63" LastKnownName="IUser" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6604a2f0-9221-47ad-a47b-28894102dcde" name="Privilege" direction="In">
+                  <elementDefinition Id="f896a902-a525-4081-8cd5-47af4f44f93f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9f79e323-05cc-4c3b-862e-78c92078b716" LastKnownName="IPrivilege" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="00a82d5b-37a0-4ed6-9847-21930671dd63" name="IUser" isAbstract="false" isLeaf="false" cachedFullName="Yea.Modeling::IUser">
+        <elementDefinition Id="0dce698b-7cb8-4321-8660-aae9c6f9f6f7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f6f865a4-35b9-4037-9ea6-121d03ac5e73" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c1c7fefe-eea6-4487-9313-c3dbee1027a8" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="9d4fc657-8535-44aa-86e7-432aac6d1781" name="IPrivilege" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="dab1f28a-0bb5-40f9-acdf-d427cdc99634" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="9f79e323-05cc-4c3b-862e-78c92078b716" name="IPrivilege" isAbstract="false" isLeaf="false" cachedFullName="Yea.Modeling::IPrivilege">
+        <elementDefinition Id="dab1f28a-0bb5-40f9-acdf-d427cdc99634" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="3e225f4a-2917-4f6e-9e49-4eb678d7372c" name="Yea.Modeling">
+    <elementDefinition Id="61f9747c-5646-46ec-a924-9176cfa74f93" />
+    <profileInstances>
+      <packageHasProfileInstances Id="5927d878-8ae2-4de7-9223-03fe72538139">
+        <profileInstance Id="d880b949-d2ca-4a5c-86f3-a5abfa7c3ffe" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="de5fdf06-6eef-4d3f-b961-81493f94371c">
+        <profileInstance Id="52d8af26-24b8-4c9f-bc92-7ca959514247" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

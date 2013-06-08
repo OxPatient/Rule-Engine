@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4D75A86-CC94-4FA2-A4CA-2E3DB23D4CFB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yea</RootNamespace>
+    <AssemblyName>Yea</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Caching\Cache.cs" />
+    <Compile Include="Caching\CacheItem.cs" />
+    <Compile Include="Caching\CachingExtensions.cs" />
+    <Compile Include="Caching\ICache.cs" />
+    <Compile Include="Caching\ICacheItem.cs" />
+    <Compile Include="Compression\BitArrayCompress.cs" />
+    <Compile Include="Compression\BitArrayStream.cs" />
+    <Compile Include="Compression\CompressionExtensions.cs" />
+    <Compile Include="Compression\CompressionType.cs" />
+    <Compile Include="Configuration\ConfigBase.cs" />
+    <Compile Include="Configuration\ConfigurationManager.cs" />
+    <Compile Include="Configuration\IConfig.cs" />
+    <Compile Include="DataTypes\Bag.cs" />
+    <Compile Include="DataTypes\BTree.cs" />
+    <Compile Include="DataTypes\Comparison\GenericComparer.cs" />
+    <Compile Include="DataTypes\Comparison\GenericEqualityComparer.cs" />
+    <Compile Include="DataTypes\DateSpan.cs" />
+    <Compile Include="DataTypes\EventArgs\EventArgs.cs" />
+    <Compile Include="DataTypes\ExtensionMethods\ArrayExtensions.cs" />
+    <Compile Include="DataTypes\ExtensionMethods\DateTimeExtensions.cs" />
+    <Compile Include="DataTypes\ExtensionMethods\DelegateExtensions.cs" />
+    <Compile Include="DataTypes\ExtensionMethods\DirectoryInfoExtensions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataTypes\ExtensionMethods\EnumExtensions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataTypes\ExtensionMethods\ExceptionExtensions.cs" />
+    <Compile Include="DataTypes\ExtensionMethods\GenericObjectExtensions.cs" />
+    <Compile Include="DataTypes\ExtensionMethods\CollectionExtensions.cs" />
+    <Compile Include="DataTypes\ExtensionMethods\ComparableExtensions.cs" />
+    <Compile Include="DataTypes\ExtensionMethods\DictionaryExtensions.cs" />
+    <Compile Include="DataTypes\ExtensionMethods\EnumerableExtensions.cs" />
+    <Compile Include="DataTypes\ExtensionMethods\MatchCollectionExtensions.cs" />
+    <Compile Include="DataTypes\ExtensionMethods\StreamExtensions.cs" />
+    <Compile Include="DataTypes\ExtensionMethods\StringExtensions.cs" />
+    <Compile Include="DataTypes\ExtensionMethods\TimeSpanExtensions.cs" />
+    <Compile Include="DataTypes\ExtensionMethods\TypeConversionExtensions.cs" />
+    <Compile Include="DataTypes\ExtensionMethods\ValueTypeExtensions.cs" />
+    <Compile Include="DataTypes\Formatters\GenericStringFormatter.cs" />
+    <Compile Include="DataTypes\Formatters\IStringFormatter.cs" />
+    <Compile Include="DataTypes\List.cs" />
+    <Compile Include="DataTypes\ListMapping.cs" />
+    <Compile Include="DataTypes\Patterns\Singleton.cs" />
+    <Compile Include="DataTypes\Patterns\Factory.cs" />
+    <Compile Include="DataTypes\Patterns\IFluentInterface.cs" />
+    <Compile Include="DataTypes\PriorityQueue.cs" />
+    <Compile Include="DataTypes\RingBuffer.cs" />
+    <Compile Include="DataTypes\StringTemplate.cs" />
+    <Compile Include="DataTypes\Table.cs" />
+    <Compile Include="DataTypes\TagDictionary.cs" />
+    <Compile Include="DataTypes\Threading\TaskQueue.cs" />
+    <Compile Include="DataTypes\Vector.cs" />
+    <Compile Include="Date.cs" />
+    <Compile Include="Encryption\HashExtensions.cs" />
+    <Compile Include="Encryption\RSAEncryption.cs" />
+    <Compile Include="Encryption\ShiftExtensions.cs" />
+    <Compile Include="Encryption\SymmetricExtensions.cs" />
+    <Compile Include="DataTypes\ExtensionMethods\ComparableExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Guard.cs" />
+    <Compile Include="Funq\Container.Adapter.cs" />
+    <Compile Include="Funq\Container.cs" />
+    <Compile Include="Funq\Container.Overloads.cs" />
+    <Compile Include="Funq\IContainerAdapter.cs" />
+    <Compile Include="Funq\IFluentInterface.cs" />
+    <Compile Include="Funq\IFunqlet.cs" />
+    <Compile Include="Funq\Owner.cs" />
+    <Compile Include="Funq\ResolutionException.cs" />
+    <Compile Include="Funq\ReuseScope.cs" />
+    <Compile Include="Funq\ServiceEntry.cs" />
+    <Compile Include="Funq\ServiceEntry.Generic.cs" />
+    <Compile Include="Funq\ServiceKey.cs" />
+    <Compile Include="Funq\Syntax.cs" />
+    <Compile Include="IO\CopyOptions.cs" />
+    <Compile Include="IO\DirectoryInfoExtensions.cs" />
+    <Compile Include="IO\FileInfoExtensions.cs" />
+    <Compile Include="IO\SerializationExtensions.cs" />
+    <Compile Include="IO\Serializers\BinarySerializer.cs" />
+    <Compile Include="IO\Serializers\ISerializer.cs" />
+    <Compile Include="IO\Serializers\JSONSerializer.cs" />
+    <Compile Include="IO\Serializers\SOAPSerializer.cs" />
+    <Compile Include="IO\Serializers\XMLSerializer.cs" />
+    <Compile Include="IO\StringExtensions.cs" />
+    <Compile Include="IO\UriExtensions.cs" />
+    <Compile Include="Localization\Enums.cs" />
+    <Compile Include="Localization\Exceptions.cs" />
+    <Compile Include="Localization\Locale.cs" />
+    <Compile Include="Localization\LocaleManager.cs" />
+    <Compile Include="Localization\StringCollection.cs" />
+    <Compile Include="Localization\StringTranslation.cs" />
+    <Compile Include="Localization\Utils.cs" />
+    <Compile Include="Logging\ConsoleLog.cs" />
+    <Compile Include="Logging\FileLog.cs" />
+    <Compile Include="Logging\ILog.cs" />
+    <Compile Include="Logging\LogBase.cs" />
+    <Compile Include="Logging\LoggingManager.cs" />
+    <Compile Include="Logging\MessageType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflection\AOP\AOPManager.cs" />
+    <Compile Include="Reflection\AOP\EventArgs\Ending.cs" />
+    <Compile Include="Reflection\AOP\EventArgs\Exception.cs" />
+    <Compile Include="Reflection\AOP\EventArgs\Starting.cs" />
+    <Compile Include="Reflection\AOP\IAspect.cs" />
+    <Compile Include="Reflection\AOP\IEvents.cs" />
+    <Compile Include="Reflection\Emit\Assembly.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\BaseClasses\CommandBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\BaseClasses\MethodBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\BaseClasses\VariableBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Commands\Add.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Commands\Assign.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Commands\Box.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Commands\Call.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Commands\Cast.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Commands\Catch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Commands\DefineLocal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Commands\Divide.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Commands\Else.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Commands\ElseIf.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Commands\EndIf.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Commands\EndTry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Commands\EndWhile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Commands\If.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Commands\Modulo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Commands\Multiply.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Commands\NewObj.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Commands\Return.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Commands\Subtract.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Commands\Throw.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Commands\Try.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Commands\UnBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Commands\While.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\ConstantBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\ConstructorBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\DefaultConstructorBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\DefaultPropertyBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\EnumBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Enums\AssemblyType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Enums\Comparison.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\FieldBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Interfaces\ICommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Interfaces\IMethodBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Interfaces\IPropertyBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\Interfaces\IType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\LocalBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\MethodBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\ParameterBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\PropertyBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\Emit\TypeBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\ReflectionExtensions.cs" />
+    <Compile Include="RuleEngine\ActionHandler.cs" />
+    <Compile Include="RuleEngine\FuncCondition.cs" />
+    <Compile Include="RuleEngine\Interfaces.cs" />
+    <Compile Include="RuleEngine\Rule.cs" />
+    <Compile Include="RuleEngine\RuleBase.cs" />
+    <Compile Include="RuleEngine\RuleDefinition.cs" />
+    <Compile Include="RuleEngine\RuleEevnt.cs" />
+    <Compile Include="RuleEngine\RuleEngine.cs" />
+    <Compile Include="RuleEngine\RuleSet.cs" />
+    <Compile Include="RuleEngine\NoMatchOption.cs" />
+    <Compile Include="Scheduler\GenericEventHandler.cs" />
+    <Compile Include="Scheduler\ITask.cs" />
+    <Compile Include="Scheduler\Model\DayUnit.cs" />
+    <Compile Include="Scheduler\Model\HourUnit.cs" />
+    <Compile Include="Scheduler\Model\MonthOnDayOfMonthUnit.cs" />
+    <Compile Include="Scheduler\Model\MonthOnDayOfWeekUnit.cs" />
+    <Compile Include="Scheduler\Model\MonthOnLastDayOfMonthUnit.cs" />
+    <Compile Include="Scheduler\Model\MonthUnit.cs" />
+    <Compile Include="Scheduler\Model\Schedule.cs" />
+    <Compile Include="Scheduler\Model\SpecificRunTime.cs" />
+    <Compile Include="Scheduler\Model\TaskEndScheduleInformation.cs" />
+    <Compile Include="Scheduler\Model\TaskStartScheduleInformation.cs" />
+    <Compile Include="Scheduler\Model\TimeUnit.cs" />
+    <Compile Include="Scheduler\Model\Week.cs" />
+    <Compile Include="Scheduler\Model\WeeklyDayOfWeekUnit.cs" />
+    <Compile Include="Scheduler\Model\WeekUnit.cs" />
+    <Compile Include="Scheduler\Model\YearOnDayOfYearUnit.cs" />
+    <Compile Include="Scheduler\Model\YearOnLastDayOfYearUnit.cs" />
+    <Compile Include="Scheduler\Model\YearUnit.cs" />
+    <Compile Include="Scheduler\Registry.cs" />
+    <Compile Include="Scheduler\TaskManager.cs" />
+    <Compile Include="Time.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Funq\Container.xdoc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ACL\" />
+    <Folder Include="BPM\" />
+    <Folder Include="Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
