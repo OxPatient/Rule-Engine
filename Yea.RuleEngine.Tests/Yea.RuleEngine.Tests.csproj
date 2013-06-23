@@ -42,6 +42,10 @@
     <Reference Include="Machine.Specifications.Clr4">
       <HintPath>..\packages\Machine.Specifications.0.5.12\lib\net40\Machine.Specifications.Clr4.dll</HintPath>
     </Reference>
+    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Rhino Mocks\Rhino.Mocks.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -53,8 +57,25 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Machine.Specifications.AutoMocking\Core\Extensions\TypeExtensions.cs" />
+    <Compile Include="Machine.Specifications.AutoMocking\Core\IDependencyBag.cs" />
+    <Compile Include="Machine.Specifications.AutoMocking\Core\IMockFactory.cs" />
+    <Compile Include="Machine.Specifications.AutoMocking\Core\ISubjectDependencyBuilder.cs" />
+    <Compile Include="Machine.Specifications.AutoMocking\Core\ISubjectFactory.cs" />
+    <Compile Include="Machine.Specifications.AutoMocking\Core\ITestState.cs" />
+    <Compile Include="Machine.Specifications.AutoMocking\Core\Observations\IObservationContext.cs" />
+    <Compile Include="Machine.Specifications.AutoMocking\Core\Observations\ObservationContext.cs" />
+    <Compile Include="Machine.Specifications.AutoMocking\Core\Observations\ObservationContextArgs.cs" />
+    <Compile Include="Machine.Specifications.AutoMocking\Core\Observations\ObservationContextFactory.cs" />
+    <Compile Include="Machine.Specifications.AutoMocking\Core\SubjectDependencyBuilder.cs" />
+    <Compile Include="Machine.Specifications.AutoMocking\Core\SubjectFactory.cs" />
+    <Compile Include="Machine.Specifications.AutoMocking\Core\TestState.cs" />
+    <Compile Include="Machine.Specifications.AutoMocking\Rhino\RhinoMocksMockFactory.cs" />
+    <Compile Include="Machine.Specifications.AutoMocking\Rhino\Specification.cs" />
+    <Compile Include="Machine.Specifications.AutoMocking\Specification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="IntegrationTests.cs" />
+    <Compile Include="ReviewbyHao\求源\AccountSpecs.cs" />
     <Compile Include="RuleBaseTests.cs" />
     <Compile Include="RuleDefinitionTests.cs" />
     <Compile Include="RuleEngineTests.cs" />
@@ -71,6 +92,13 @@
       <Project>{057381bb-3a68-4d95-ad78-b65739c95a9c}</Project>
       <Name>Yea.RuleEngine</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Rhino Mocks\acknowledgements.txt" />
+    <Content Include="Rhino Mocks\license.txt" />
+    <Content Include="Rhino Mocks\Rhino.Mocks.dll" />
+    <Content Include="Rhino Mocks\Rhino.Mocks.pdb" />
+    <Content Include="Rhino Mocks\Rhino.Mocks.xml" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
